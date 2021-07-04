@@ -39,7 +39,7 @@ describe 'my own reduce-like methods' do
     it "reduces correctly" do
       source_array = [1,2,3]
       starting_point = 100
-      expect(reduce_to_total(source_array, starting_point)).to eq(106)
+      expect(reduce_to_total2(source_array, starting_point)).to eq(106)
     end
   end
 
@@ -53,7 +53,7 @@ describe 'my own reduce-like methods' do
   describe "reduce_to_all_true returns false when any value is false" do
     it "reduces correctly" do
       source_array = [1, 2, true, "razmatazz", false]
-      expect(reduce_to_all_true(source_array)).to be_falsy
+      expect(reduce_to_all_true2(source_array)).to be_falsy
     end
   end
 
@@ -67,7 +67,7 @@ describe 'my own reduce-like methods' do
   describe "reduce_to_any_true returns false when no truthy value is present" do
     it "reduces correctly" do
       source_array = [ false, nil, nil, nil]
-      expect(reduce_to_any_true(source_array)).to eq(false)
+      expect(reduce_to_any_true2(source_array)).to eq(false)
     end
   end
 end
